@@ -4,6 +4,7 @@ import 'home_page.dart';
 import 'category_page.dart';
 import 'car_page.dart';
 import 'member_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class tabbarPages extends StatefulWidget {
   @override
@@ -35,6 +36,8 @@ class _tabbarPagesState extends State<tabbarPages> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context,
+        designSize: Size(750, 1334), allowFontScaling: false);
     return Scaffold(
       backgroundColor: Color.fromARGB(244, 244, 244, 0),
       bottomNavigationBar: BottomNavigationBar(
