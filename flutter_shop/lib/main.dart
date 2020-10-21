@@ -3,7 +3,7 @@ import './pages/hyf_tabbar_index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main(List<String> args) {
-  runApp(myapp1());
+  runApp(myapp());
 }
 
 class myapp extends StatelessWidget {

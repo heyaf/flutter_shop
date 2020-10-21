@@ -22,7 +22,12 @@ class _tabbarPagesState extends State<tabbarPages> {
         icon: Icon(CupertinoIcons.profile_circled), title: Text('会员中心')),
   ];
 
-  final List pagesLists = [HomePage(), CategoryPage(), CarPage(), MemberPage()];
+  final List<Widget> pagesLists = [
+    HomePage(),
+    CategoryPage(),
+    CarPage(),
+    MemberPage()
+  ];
 
   int currentIndex = 0;
   var currentPages;
@@ -51,7 +56,10 @@ class _tabbarPagesState extends State<tabbarPages> {
           });
         },
       ),
-      body: currentPages,
+      body: IndexedStack(
+        index: currentIndex,
+        children: pagesLists,
+      ),
     );
   }
 }
