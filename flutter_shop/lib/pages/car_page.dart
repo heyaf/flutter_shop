@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../provide/counter.dart';
 
 class CarPage extends StatelessWidget {
   const CarPage({Key key}) : super(key: key);
@@ -7,7 +9,11 @@ class CarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('购物车界面'),
+        child: Provide<Counter>(
+          builder: (context, child, value) {
+            return Text('${value.value}');
+          },
+        ),
       ),
       backgroundColor: Colors.green,
     );

@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import './pages/hyf_tabbar_index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provide/provide.dart';
+import './provide/counter.dart';
 
 void main(List<String> args) {
-  runApp(myapp());
+  var counter = Counter();
+  var providers = Providers();
+  providers..provide(Provider<Counter>.value(counter));
+  runApp(ProviderNode(
+    child: myapp(),
+    providers: providers,
+  ));
 }
 
 class myapp extends StatelessWidget {
