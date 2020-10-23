@@ -8,12 +8,8 @@ class CarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Provide<Counter>(
-          builder: (context, child, value) {
-            return Text('${value.value}');
-          },
-        ),
+      body: Row(
+        children: [Text('111'), Text('22222')],
       ),
       backgroundColor: Colors.green,
     );
